@@ -11,7 +11,7 @@ A Node.js-based Biometric Time Clock RESTful API to manage employee check-ins, c
 - [Documentation](#documentation)
   - [Creating a New Employee](#creating-a-new-employee)
   - [Getting a List of Employees](#getting-a-list-of-all-employees)
-  - [Getting a List of Employees](#filter-by-date)
+  - [Filter by date](#filter-by-date)
   - [Employee Check-In](#employee-check-in)
   - [Employee Check-Out](#employee-check-out)
 - [Testing](#testing)
@@ -93,7 +93,7 @@ To record an employee's check-in, send a POST request to `localhost:3001/api/tim
 ```json
 {
   "employeeId": "<Employee_ID>",
-  "comment": "Arrived at work"
+  "comment": "Check in"
 }
 ```
 
@@ -106,7 +106,7 @@ To record an employee's check-out, send a POST request to `localhost:3001/api/ti
 ```json
 {
   "employeeId": "<Employee_ID>",
-  "comment": "End of workday"
+  "comment": "Check out"
 }
 ```
 
