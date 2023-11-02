@@ -1,7 +1,3 @@
-# Biometric Time Clock
-
-A Node.js-based Biometric Time Clock RESTful API to manage employee check-ins, check-outs, and employee data for ABC School.
-
 ## Table of Contents
 
 - [Introduction](#introduction)
@@ -18,7 +14,7 @@ A Node.js-based Biometric Time Clock RESTful API to manage employee check-ins, c
 
 ## Introduction
 
-ABC School's Biometric Time Clock is a web-based API designed to manage employee check-ins, check-outs, and employee data. This project provides a RESTful API for creating and managing employee records, recording check-ins and check-outs, and calculating the time duration between them.
+A Biometric Time Clock RESTful API to manage employee check-ins, check-outs, and employee data for ABC School.
 
 ## Features
 
@@ -93,7 +89,7 @@ To record an employee's check-in, send a POST request to `localhost:3001/api/tim
 ```json
 {
   "employeeId": "<Employee_ID>",
-  "comment": "Check in"
+  "description": "Check in"
 }
 ```
 
@@ -106,7 +102,7 @@ To record an employee's check-out, send a POST request to `localhost:3001/api/ti
 ```json
 {
   "employeeId": "<Employee_ID>",
-  "comment": "Check out"
+  "description": "Check out"
 }
 ```
 
