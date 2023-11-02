@@ -8,8 +8,7 @@ const expect = chai.expect;
 
 describe("Employee Controllers", () => {
   before(function () {
-    // Set a longer timeout for this hook
-    this.timeout(5000); // Adjust the timeout as needed
+    this.timeout(5000); 
 
     return new Promise(async (resolve, reject) => {
       try {
@@ -68,7 +67,7 @@ describe("Employee Controllers", () => {
   });
 
   it("should get employees by date", (done) => {
-    const date = "2023-11-02"; // Replace with a valid date
+    const date = "2023-11-02"; 
     chai
       .request(app)
       .get(`/api/employees/${date}`)
