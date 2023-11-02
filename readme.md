@@ -8,17 +8,13 @@ A Node.js-based Biometric Time Clock RESTful API to manage employee check-ins, c
 - [Features](#features)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
-- [Configuration](#configuration)
-- [Usage](#usage)
+- [Documentation](#documentation)
   - [Creating a New Employee](#creating-a-new-employee)
-  - [Getting a List of Employees](#getting-a-list-of-employees)
+  - [Getting a List of Employees](#getting-a-list-of-all-employees)
+  - [Getting a List of Employees](#filter-by-date)
   - [Employee Check-In](#employee-check-in)
   - [Employee Check-Out](#employee-check-out)
-- [Documentation](#documentation)
 - [Testing](#testing)
-- [Docker Support](#docker-support)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Introduction
 
@@ -27,11 +23,10 @@ ABC School's Biometric Time Clock is a web-based API designed to manage employee
 ## Features
 
 - Create a new employee.
-- Get a list of all employees with optional filtering by the date of creation.
+- Get a list of all employees.
 - Get a list of employees by the date of creation.
 - Record employee check-ins and check-outs with comments.
 - Calculate the time duration between check-in and check-out in hours.
-- Secure employee data using a database.
 
 ## Prerequisites
 
@@ -60,7 +55,7 @@ Before getting started, make sure you have the following installed on your syste
 
    ```
 
-## Usage
+## Documentation
 
 ### Creating a New Employee
 
@@ -75,7 +70,7 @@ To create a new employee, send a POST request to `localhost:3001/api/employees` 
 }
 ```
 
-### Getting a List of Employees
+### Getting a List of all Employees
 
 To get a list of employees, send a GET request to `localhost:3001/api/employees`. You can add an optional query parameter to filter employees by the date of creation:
 
