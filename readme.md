@@ -26,10 +26,11 @@ ABC School's Biometric Time Clock is a web-based API designed to manage employee
 
 ## Features
 
-- Create a new employee with essential details (Last Name, First Name, Date Created, Department).
-- Get a list of employees with optional filtering by the date of creation.
+- Create a new employee.
+- Get a list of all employees with optional filtering by the date of creation.
+- Get a list of employees by the date of creation.
 - Record employee check-ins and check-outs with comments.
-- Calculate the time duration between check-in and check-out.
+- Calculate the time duration between check-in and check-out in hours.
 - Secure employee data using a database.
 
 ## Prerequisites
@@ -38,8 +39,7 @@ Before getting started, make sure you have the following installed on your syste
 
 - Node.js
 - npm
-- MongoDB
-- Docker (optional)
+- Docker/docker-compose
 
 ## Installation
 
@@ -129,4 +129,4 @@ Replace `<Employee_ID>` with the employee's ID.
 
 ## Testing
 
-To run tests, you have to change the CMD in the docker file from "CMD ["node", "app.js" ]" to "CMD ["npx", "mocha", "test.js" ]" and rebuild
+To run tests, you have to change the CMD in the docker file from "CMD ["node", "app.js" ]" to "CMD ["npx", "mocha", "test.js" ]" and rebuild.
