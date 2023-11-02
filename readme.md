@@ -47,63 +47,53 @@ Before getting started, make sure you have the following installed on your syste
 
    ```
 
-   git clone git@github.com:mer1Knn/biometric-time-clock.git
+   git clone https://github.com/Dakidhem/yassir-tech-test.git
 
    ```
 
-2. Install project dependencies:
+2. Build and up the docker-compose file
 
    ```
 
-   npm install
+   docker-compose -f docker-compose.yml build
+   docker-compose -f docker-compose.yml up
 
    ```
-
-3. Set up your database and configure the connection (see [Configuration](#configuration)).
-4. Start the application:
-
-   ```
-
-   npm start
-
-   ```
-
-## Configuration
-
-You need to configure the database connection. Create a `.env` file in the project's root directory and add the following:
-
-```env
-MONGODB_URI=<Your_MongoDB_URI>
-```
-
-Replace `<Your_MongoDB_URI>` with the connection URI for your MongoDB database.
 
 ## Usage
 
 ### Creating a New Employee
 
-To create a new employee, send a POST request to `/employees` with the following JSON payload:
+To create a new employee, send a POST request to `localhost:3001/api/employees` with the following JSON payload:
 
 ```json
 {
-  "lastName": "Kanoune",
-  "firstName": "Merouane",
-  "dateCreated": "2023-10-29T20:34:08.465+00:00",
-  "department": "Tech"
+  "id": "kadirimehdi18",
+  "lastName": "Kadiri",
+  "firstName": "Mehdi",
+  "department": "IT"
 }
 ```
 
 ### Getting a List of Employees
 
-To get a list of employees, send a GET request to `/employees`. You can add an optional query parameter to filter employees by the date of creation:
+To get a list of employees, send a GET request to `localhost:3001/api/employees`. You can add an optional query parameter to filter employees by the date of creation:
 
 ```http
-GET /employees?dateCreated=2022-01-05
+GET localhost:3001/api/employees
+```
+
+### Filter by date
+
+To get a list of employees by a date, send a GET request to `localhost:3001/api/employees/:date`:
+
+```http
+GET localhost:3001/api/employees/2023-11-02
 ```
 
 ### Employee Check-In
 
-To record an employee's check-in, send a POST request to `/check-in` with the following JSON payload:
+To record an employee's check-in, send a POST request to `localhost:3001/api/times/check-in` with the following JSON payload:
 
 ```json
 {
@@ -116,7 +106,7 @@ Replace `<Employee_ID>` with the employee's ID.
 
 ### Employee Check-Out
 
-To record an employee's check-out, send a POST request to `/check-out` with the following JSON payload:
+To record an employee's check-out, send a POST request to `localhost:3001/api/times/check-out` with the following JSON payload:
 
 ```json
 {
